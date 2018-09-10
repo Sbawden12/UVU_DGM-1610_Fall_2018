@@ -12,6 +12,6 @@ public class Add_ForceScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        rb.AddForce(0, 1000, 0);
+        rb.AddForce(0, 100, 0);
 	}
 }
