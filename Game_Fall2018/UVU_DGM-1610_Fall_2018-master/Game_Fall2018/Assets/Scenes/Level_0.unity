@@ -113,6 +113,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33786004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 33786005}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33786005
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33786004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1885, y: -0.5058, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 876047785}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50654946
 GameObject:
   m_ObjectHideFlags: 0
@@ -4976,6 +5004,7 @@ GameObject:
   - component: {fileID: 876047782}
   - component: {fileID: 876047781}
   - component: {fileID: 876047786}
+  - component: {fileID: 876047787}
   m_Layer: 0
   m_Name: Anim_Cube
   m_TagString: Untagged
@@ -5061,7 +5090,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.043619223, z: 0, w: -0.99904823}
   m_LocalPosition: {x: 715, y: 356, z: 50}
   m_LocalScale: {x: 50, y: 50, z: 50}
-  m_Children: []
+  m_Children:
+  - {fileID: 33786005}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 365, z: 0}
@@ -5072,7 +5102,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876047780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d569c07b3a1760d41b5be49781864791, type: 2}
   m_CullingMode: 0
@@ -5083,6 +5113,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &876047787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876047780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c7cb371cf7f1148a3f6c994a6b5d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 2
+  GroundCheck: {fileID: 0}
+  GroundCheckRadius: 0.5
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1163436608
 GameObject:
   m_ObjectHideFlags: 0
@@ -5095,6 +5142,8 @@ GameObject:
   - component: {fileID: 1163436610}
   - component: {fileID: 1163436609}
   - component: {fileID: 1163436613}
+  - component: {fileID: 1163436615}
+  - component: {fileID: 1163436614}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5190,6 +5239,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 0
+  GroundCheck: {fileID: 0}
+  GroundCheckRadius: 0
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &1163436614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163436608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c7cb371cf7f1148a3f6c994a6b5d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 0
+  GroundCheck: {fileID: 0}
+  GroundCheckRadius: 0
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &1163436615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163436608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c7cb371cf7f1148a3f6c994a6b5d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 0
+  GroundCheck: {fileID: 0}
+  GroundCheckRadius: 0
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1295510333
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,7 +5289,7 @@ GameObject:
   - component: {fileID: 1295510336}
   - component: {fileID: 1295510335}
   - component: {fileID: 1295510334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
