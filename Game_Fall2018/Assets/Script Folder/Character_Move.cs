@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character_Move : MonoBehaviour {
 
 	public int MoveSpeed;
-	private float JumpHeight;
+	public float JumpHeight;
 
 //Player Grounded variables
 	public Transform GroundCheck;
