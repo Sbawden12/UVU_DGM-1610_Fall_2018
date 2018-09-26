@@ -43,7 +43,7 @@ public class Character_Move : MonoBehaviour {
 			DoubleJump = true;
 		}
 		//Non-Slide Player
-		MoveVelocity = ;
+		MoveVelocity = 0f;
 
 		// This code makes the character move from side to side using the A&D keys
 		if(Input.GetKey (KeyCode.D)){
