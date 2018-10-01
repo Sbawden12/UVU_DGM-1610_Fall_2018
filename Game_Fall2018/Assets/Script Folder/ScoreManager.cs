@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour {
 
-public static int Score;
+	public static int Score;
 
 	Text ScoreText;
 
@@ -18,13 +18,12 @@ public static int Score;
 	// Update is called once per frame
 	void Update () {
 		if (Score < 0)
-		    Score = 0;
+		   	 Score = 0;
+		
 		ScoreText.text = " " + Score;
 	}
 
 	public static void AddPoints (int PointsToAdd) {
 		Score += PointsToAdd;
 	}
-
-	
 }
