@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = FindObjectOfType<Rigidbody2D> ();
+		//player = FindObjectOfType<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -34,27 +34,34 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public void RespawnPlayer(){
-		StarCoroutine ("RespawnPlayerCo");
+		StartCoroutine ("RespawnPlayerCo");
 	}
 
 	public IEnumerator RespawnPlayerCo(){
 		// Generate Death Particle
-		Instantiate (DeathParticle, player.transform.position, player.transform.rotation);
+		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		// Hide Player
-		player.enabled = false;
-		player.GetComponent<Renderer> ().enabled = false;
+		//player.enabled = false;
+		Player.GetComponent<Renderer> ().enabled = false;
 		// Gravity Reset
-		gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
-		player.GetComponent<Rigidbody2D>().gravityScale = 0f;
-		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
+		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
+		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		// Point Penalty
 		ScoreManager.AddPoints(-PointPenaltyOnDeath);
 		// DebugMessage
 		Debug.Log ("Player Respawn");
 		// Respawn Delay
-		yeild return new WaitForSeconds (RespawnDelay);
+		yield return new WaitForSeconds (RespawnDelay);
 		// Gravity Restore
-		player.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
-
+		Player.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
+		// Maatch PCs transform position
+		Player.transform.position = CurrentCheckPoint.transform.position;
+		//Show PC
+		// PC.enabled = true;
+		Player.GetComponent<Renderer> ().enabled = true;
+		// Spawn PC
+		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
+		
 	}
 }

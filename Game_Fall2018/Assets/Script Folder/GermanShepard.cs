@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class GermanShepard : K9 {
+
+	public bool Friendly;
 
 	// Use this for initialization
 	void Start () {
