@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f3659cb6888d24b6797c49e6570cfdcc
+guid: f3809f0eeaef14c8596d5fc6c93efd12
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CoinDrawing_0
-    21300002: CoinDrawing_1
-    21300004: CoinDrawing_2
+    21300000: CoinDrawingInvert_0
+    21300002: CoinDrawingInvert_1
+    21300004: CoinDrawingInvert_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -98,51 +98,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CoinDrawing_0
+      name: CoinDrawingInvert_0
       rect:
         serializedVersion: 2
-        x: 314
-        y: 333
-        width: 65
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3ccb189db80e4e2dad5b9f62af0d98d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CoinDrawing_1
-      rect:
-        serializedVersion: 2
-        x: 390
-        y: 333
-        width: 42
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83da93d0e72a94f5598acdeb20b9d887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CoinDrawing_2
-      rect:
-        serializedVersion: 2
-        x: 458
-        y: 334
+        x: 10
+        y: 5
         width: 17
         height: 63
       alignment: 0
@@ -152,7 +112,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3219569ff0bd1496a934668f080b360f
+      spriteID: d0735cea7b3d0444e8505d45bf9eaaf2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinDrawingInvert_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 4
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8e5e17c3c744c3cbb22c3cdc9e6941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinDrawingInvert_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 4
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6173759b68dd942c1b01be4a3bacaa23
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b411b6e86e5b14dc581085d7327378e4
+    spriteID: d449557826b344a41aa5aa562462859c
     vertices: []
     indices: 
     edges: []
