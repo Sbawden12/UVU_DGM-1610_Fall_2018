@@ -5346,7 +5346,7 @@ MonoBehaviour:
   WallCheckRadius: 0.1
   WhatIsWall:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
   EdgeCheck: {fileID: 2003064222}
 --- !u!50 &766178323
 Rigidbody2D:
@@ -5391,7 +5391,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1.5}
+  m_Size: {x: 0.6, y: 1.4}
   m_EdgeRadius: 0
 --- !u!212 &766178325
 SpriteRenderer:
@@ -5747,7 +5747,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1286919762049950, guid: c9b1c8ff124392e478965cff95e2ca6b, type: 2}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9b1c8ff124392e478965cff95e2ca6b, type: 2}
@@ -5763,7 +5763,7 @@ GameObject:
   m_Layer: 9
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5774,7 +5774,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 975863212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.394, y: -0.282, z: -0.0030237362}
+  m_LocalPosition: {x: -0.487, y: -0.515, z: -0.0030237362}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children: []
   m_Father: {fileID: 766178326}
@@ -10885,7 +10885,7 @@ GameObject:
   m_Layer: 10
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10896,7 +10896,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003064221}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.394, y: -0.42, z: 0}
+  m_LocalPosition: {x: -0.449, y: -0.861, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 766178326}
